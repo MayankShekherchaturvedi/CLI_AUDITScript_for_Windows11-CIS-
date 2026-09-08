@@ -1,0 +1,16 @@
+rules:
+  - id: "2.3.1.2"
+    title: "Ensure 'Guest' account status is set to 'Disabled'"
+    command: "(Get-LocalUser -Name Guest).Enabled"
+    expected_output: "False"
+
+  - id: "18.8.21.2"
+    title: "Ensure 'Turn off Autoplay' is set to 'Enabled: All drives'"
+    # Checks the registry for the NoDriveTypeAutoRun key (255 means all drives disabled)
+    command: "(Get-ItemProperty -Path 'HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer' -Name 'NoDriveTypeAutoRun' -ErrorAction SilentlyContinue).NoDriveTypeAutoRun"
+    expected_output: "255"
+
+  - id: "2.3.7.4"
+    title: "Ensure 'Interactive logon: Do not display last signed-in' is Enabled"
+    command: "(Get-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System').DontDisplayLastUserName"
+    expected_output: "1"

@@ -1,0 +1,16 @@
+rules:
+  - id: "3.1.1"
+    title: "Ensure IP forwarding is disabled"
+    # IP forwarding allows a machine to act as a router. CIS says this should be disabled on workstations.
+    command: "sysctl net.ipv4.ip_forward"
+    expected_output: "net.ipv4.ip_forward = 0"
+
+  - id: "5.1.8"
+    title: "Ensure cron daemon is enabled and running"
+    command: "systemctl is-enabled cron"
+    expected_output: "enabled"
+
+  - id: "1.1.1.1"
+    title: "Ensure mounting of cramfs filesystems is disabled"
+    command: "modprobe -n -v cramfs"
+    expected_output: "install /bin/true"
