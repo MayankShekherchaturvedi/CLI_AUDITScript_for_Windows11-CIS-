@@ -8,7 +8,7 @@ Instead of manually checking hundreds of system configurations, this tool dynami
 * **Cross-Platform Execution:** Automatically detects the host OS and runs PowerShell commands (Windows) or Bash commands (Linux).
 * **Decoupled Architecture:** Security rules are stored in YAML files, separating the configuration from the Python execution engine.
 * **Scalable:** Easily add hundreds of new CIS benchmark checks by simply adding a few lines to a text file.
-* **Beautiful CLI Output:** Utilizes the `Rich` library to render clean, readable, and color-coded status tables.
+* **Beautiful CLI Output:** Utilizes the `Rich` library to render clean, readable, and color-coded status tables. ( yet to be implemented )
 
 ## 📂 Project Structure
 ```text
