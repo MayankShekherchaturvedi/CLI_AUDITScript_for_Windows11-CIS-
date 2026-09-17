@@ -79,4 +79,4 @@ YAML
 
 ```
 ⚠️ Disclaimer
-This is an educational tool designed to demonstrate system auditing concepts. Ensure you have authorization before running security scripts on production networks.
+This is an educational tool designed to demonstrate system auditing concepts. Ensure you have authorization before running security scripts on production networks. But who am i to stop you?
